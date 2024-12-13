@@ -209,11 +209,11 @@ public class MainForm extends javax.swing.JFrame {
             KhachHangDAO khachHangDAO = new KhachHangDAO(con);
             List<KhachHang> khachHangLst = khachHangDAO.readKhachHang();
             
-            DefaultTableModel tableStudent = (DefaultTableModel) this.tableKhachHang.getModel();
-            tableStudent.setRowCount(0);
+            DefaultTableModel tableKhachHang = (DefaultTableModel) this.tableKhachHang.getModel();
+            tableKhachHang.setRowCount(0);
             
             for (KhachHang khachHang : khachHangLst) {
-                tableStudent.addRow(new Object[] {
+                tableKhachHang.addRow(new Object[] {
                     khachHang.getMaKH(),
                     khachHang.getTenKH(),
                     khachHang.getDiaChi(),
